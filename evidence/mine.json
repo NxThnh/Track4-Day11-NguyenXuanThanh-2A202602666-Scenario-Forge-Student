@@ -1,0 +1,175 @@
+{
+ "file": "hazard.json",
+ "hazards": [
+  {
+   "who": "L1",
+   "decel": 5.5,
+   "dur": 2.0,
+   "t0": 0.0,
+   "trig": 40.0,
+   "type": "brake"
+  }
+ ],
+ "space": {
+  "h0_decel": [
+   3.5,
+   6.0
+  ],
+  "h0_dur": [
+   1.0,
+   3.0
+  ],
+  "h0_trig": [
+   18.0,
+   42.0
+  ]
+ },
+ "world": "town",
+ "exposure": 0.00014,
+ "why": "Xe dẫn L1 phanh khẩn cấp khi còn cách xe ta 18–42 m, giảm tốc 3,5–6 m/s² trong 1–3 s; đây là dải thử nhạy cảm, chỉ giữ mẫu dưới giới hạn μg. LongROAD ghi nhận 1,16 lần phanh mạnh (ngưỡng khoảng 0,4g) trên 1000 dặm xe chạy: https://pmc.ncbi.nlm.nih.gov/articles/PMC8005989/ . Quãng đường mặc định 189 m của world.json tương đương 0,117 dặm, nên 0,117×1,16/1000≈0,000136; làm tròn thành exposure=0,00014. Đây chỉ là đại diện cho mọi phanh mạnh, chưa lọc riêng xe dẫn phanh trước xe ta; để dùng thực địa cần đo log của xe dẫn và quãng đường tuyến tương ứng.",
+ "exact": {
+  "planner": []
+ },
+ "infeasible": 206,
+ "accepted": 0.8626666666666667,
+ "conditional_on": "your town's traffic",
+ "baseline": {
+  "n": 1294,
+  "crashes": 3,
+  "avoidable": 0,
+  "unavoidable": 0,
+  "unattributed": 3,
+  "low_speed": 0,
+  "avoidable_foreknown": 0,
+  "overlap_at_start": 0,
+  "by_hazard": {
+   "unattributed": 3
+  },
+  "examples": [
+   {
+    "params": {
+     "cutT0": 6.231533001174371,
+     "cutDur": 4.024591119536151,
+     "cutV": 15.581549642198818,
+     "cutDs": 0.8014898124955785,
+     "pedT0": 5.106935718447724,
+     "pedV": 1.5149653228623752,
+     "busGo": 14.2963619810809,
+     "tgT": 1.059641220079828,
+     "cutGap": 5.887845573492503,
+     "pedGap": 4.5995233381755005,
+     "mu": 0.8,
+     "pedLook": 1,
+     "cutBrake": 3.6138408422512973,
+     "civil": true,
+     "h0_decel": 4.298919398093982,
+     "h0_dur": 1.7792792696458548,
+     "h0_trig": 35.56883207819135
+    },
+    "kind": "unattributed",
+    "low_speed": false,
+    "other": "C2",
+    "t": 14.7,
+    "v_ego": 1.6123583316802979,
+    "fire_t": null,
+    "brake_t": null
+   },
+   {
+    "params": {
+     "cutT0": 9.768160084156186,
+     "cutDur": 6.618452485856484,
+     "cutV": 14.25017588187331,
+     "cutDs": -0.9619890144617145,
+     "pedT0": 15.215149756976945,
+     "pedV": 1.5306814836078604,
+     "busGo": 17.73071937260539,
+     "tgT": 0.6589016202883411,
+     "cutGap": 8.018588272978338,
+     "pedGap": 5.162877772187914,
+     "mu": 0.8,
+     "pedLook": 1,
+     "cutBrake": 0.0,
+     "civil": true,
+     "h0_decel": 3.7332540522309587,
+     "h0_dur": 1.0240734976028116,
+     "h0_trig": 35.77982516823096
+    },
+    "kind": "unattributed",
+    "low_speed": false,
+    "other": "C2",
+    "t": 13.25,
+    "v_ego": 2.62825345993042,
+    "fire_t": null,
+    "brake_t": null
+   },
+   {
+    "params": {
+     "cutT0": 9.697969308734132,
+     "cutDur": 7.605831056979784,
+     "cutV": 13.539730273995508,
+     "cutDs": 5.939609128430021,
+     "pedT0": 16.704575831661636,
+     "pedV": 0.8651334020676384,
+     "busGo": 14.655715192499672,
+     "tgT": 0.9021137361271929,
+     "cutGap": 9.991715918117768,
+     "pedGap": 4.470964758858132,
+     "mu": 0.8,
+     "pedLook": 0,
+     "cutBrake": 3.9054042254114045,
+     "civil": true,
+     "h0_decel": 4.701469028582491,
+     "h0_dur": 1.009156319871091,
+     "h0_trig": 41.490988171842616
+    },
+    "kind": "unattributed",
+    "low_speed": false,
+    "other": "C2",
+    "t": 13.5,
+    "v_ego": 2.957777976989746,
+    "fire_t": null,
+    "brake_t": null
+   }
+  ],
+  "p": 0.0,
+  "lo": 0.0,
+  "hi": 0.0029599914196000495,
+  "per_trip": 0.0,
+  "per_trip_hi": 4.143987987440069e-07
+ },
+ "chosen": {
+  "n": 1294,
+  "crashes": 0,
+  "avoidable": 0,
+  "unavoidable": 0,
+  "unattributed": 0,
+  "low_speed": 0,
+  "avoidable_foreknown": 0,
+  "overlap_at_start": 0,
+  "by_hazard": {},
+  "examples": [],
+  "p": 0.0,
+  "lo": 0.0,
+  "hi": 0.0029599914196000495,
+  "per_trip": 0.0,
+  "per_trip_hi": 4.143987987440069e-07
+ },
+ "_run": {
+  "mssv": "202602666",
+  "town": "B",
+  "quick": false,
+  "step": "mine",
+  "salted": false,
+  "budgets": {
+   "replay_n": 400,
+   "mc_n": 3000,
+   "iters": 8,
+   "per_iter": 300,
+   "final_n": 600,
+   "seeds": 3,
+   "fix_n": 400,
+   "progress_n": 256,
+   "mine_n": 1500
+  }
+ }
+}
